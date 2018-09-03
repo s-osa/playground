@@ -1,0 +1,17 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/s-osa/playground.git",
+  "author": "OSA Shunsuke <hhelibebcnofnenamg@gmail.com>",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
