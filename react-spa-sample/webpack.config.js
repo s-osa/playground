@@ -11,7 +11,8 @@ module.exports = {
                 loader: 'babel-loader',
                 query: {
                     plugins: [
-                        'transform-react-jsx'
+                        'transform-react-jsx',
+                        'babel-plugin-transform-decorators-legacy'
                     ]
                 }
             }
