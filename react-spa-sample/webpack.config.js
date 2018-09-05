@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 
 module.exports = {
+    mode: 'development',
     devtool: 'inline-source-map',
     entry: [
         'babel-polyfill',
@@ -18,7 +19,8 @@ module.exports = {
                 secure: false,
                 changeOrigin: true
             }
-        }
+        },
+        historyApiFallback: true // Go index.html when history API returns error
     },
     output: {
         publicPath: '/dist',
