@@ -12,7 +12,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader', // babel-loaderを使って変換する
                     options: {
-                        plugins: ["transform-react-jsx"] // babelのtransform-react-jsxプラグインを使ってjsxを変換
+                        plugins: ["transform-react-jsx", "babel-plugin-transform-decorators-legacy"] // babelのtransform-react-jsxプラグインを使ってjsxを変換
                     }
                 }
             }
