@@ -5,10 +5,15 @@ class Message(message: String) {
         this.message = message
     }
 
-    fun puts() {
-        println(message)
+    fun puts(n: Int = 1) {
+        var i = 0
+
+        while (i < n) {
+            println(message)
+            i++
+        }
     }
 }
 
 val msg = Message("Hello Kotlin class!")
-msg.puts()
+msg.puts(10)
