@@ -24,6 +24,12 @@ class Appetizer < Menu
   end
 end
 
+class Dolce < Menu
+  def initialize(name, price)
+    super('Dolce', name, price)
+  end
+end
+
 menus = [
   Alcohol.new('デカンタ 250ml 赤', 200),
   Alcohol.new('デカンタ 250ml 白', 200),
@@ -60,6 +66,19 @@ menus = [
   Appetizer.new('フレッシュチーズとトマトのサラダW', 598),
   Appetizer.new('プロシュート', 399),
   Appetizer.new('プロシュートW', 798),
+  Dolce.new('カプチーノ(アイスケーキ)', 199),
+  Dolce.new('プリントカプチーノの盛り合わせ', 399),
+  Dolce.new('プリントティラミスの盛り合わせ', 399),
+  Dolce.new('ティラミス(アイスケーキ)', 199),
+  Dolce.new('イタリアンプリン', 249),
+  Dolce.new('シナモンフォッカチオ', 169),
+  Dolce.new('ミルクアイスのせシナモンフォッカチオ', 319),
+  Dolce.new('コーヒーゼリー', 299),
+  Dolce.new('トリフアイスクリーム', 369),
+  Dolce.new('ミルクジェラート', 199),
+  Dolce.new('シチリア産レモンのソルベ', 199),
+  Dolce.new('チョコレートケーキ', 299),
+  Dolce.new('セットドリンクバー', 190),
 ]
 
 max = ARGV[0] ? Integer(ARGV[0]) : 1000
