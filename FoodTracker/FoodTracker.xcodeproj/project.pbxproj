@@ -15,6 +15,7 @@
 		19824BFD251871DE00561EF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19824BFB251871DE00561EF3 /* LaunchScreen.storyboard */; };
 		19824C08251871DF00561EF3 /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19824C07251871DF00561EF3 /* FoodTrackerTests.swift */; };
 		19824C132520A3FF00561EF3 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19824C122520A3FF00561EF3 /* RatingControl.swift */; };
+		19824C152520DBE200561EF3 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19824C142520DBE200561EF3 /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		19824C07251871DF00561EF3 /* FoodTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerTests.swift; sourceTree = "<group>"; };
 		19824C09251871DF00561EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19824C122520A3FF00561EF3 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		19824C142520DBE200561EF3 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		19824BEF251871DD00561EF3 /* FoodTracker */ = {
 			isa = PBXGroup;
 			children = (
+				19824C142520DBE200561EF3 /* Meal.swift */,
 				19824BF0251871DD00561EF3 /* AppDelegate.swift */,
 				19824BF2251871DD00561EF3 /* SceneDelegate.swift */,
 				19824BF4251871DD00561EF3 /* ViewController.swift */,
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19824C152520DBE200561EF3 /* Meal.swift in Sources */,
 				19824C132520A3FF00561EF3 /* RatingControl.swift in Sources */,
 				19824BF5251871DD00561EF3 /* ViewController.swift in Sources */,
 				19824BF1251871DD00561EF3 /* AppDelegate.swift in Sources */,
