@@ -87,12 +87,12 @@
 		19824BEF251871DD00561EF3 /* FoodTracker */ = {
 			isa = PBXGroup;
 			children = (
+				19824BF6251871DD00561EF3 /* Main.storyboard */,
 				19824C142520DBE200561EF3 /* Meal.swift */,
 				19824BF0251871DD00561EF3 /* AppDelegate.swift */,
 				19824BF2251871DD00561EF3 /* SceneDelegate.swift */,
-				19824BF4251871DD00561EF3 /* MealViewController.swift */,
 				19824C122520A3FF00561EF3 /* RatingControl.swift */,
-				19824BF6251871DD00561EF3 /* Main.storyboard */,
+				19824BF4251871DD00561EF3 /* MealViewController.swift */,
 				19545ED72520FA8200ACEF3A /* MealTableViewController.swift */,
 				19545ED52520F26A00ACEF3A /* MealTableViewCell.swift */,
 				19824BF9251871DE00561EF3 /* Assets.xcassets */,
