@@ -19,8 +19,13 @@ class MealTableViewController: UITableViewController {
         // Use the edit button item provided by the table view controller
         navigationItem.leftBarButtonItem = editButtonItem
 
-        // Load the sample data.
-        loadSampleMeals()
+        // Load any saved meals, otherwise load sample data.
+        if let savedMeals = loadMeals() {
+            meals += savedMeals
+        } else {
+            // Load the sample data.
+            loadSampleMeals()
+        }
     }
 
     // MARK: - Table view data source
@@ -59,6 +64,7 @@ class MealTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             meals.remove(at: indexPath.row)
+            saveMeals()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -122,6 +128,9 @@ class MealTableViewController: UITableViewController {
                 meals.append(meal)
                 tableView.insertRows(at: [newIndexPath], with: .automatic)
             }
+
+            // Save the meals.
+            saveMeals()
         }
     }
 
@@ -144,5 +153,23 @@ class MealTableViewController: UITableViewController {
         }
 
         meals += [meal1, meal2, meal3]
+    }
+
+    private func saveMeals() {
+        guard let archiveData = try? NSKeyedArchiver.archivedData(withRootObject: meals, requiringSecureCoding: false) else {
+            os_log("Failed to save meals...", log: OSLog.default, type: .error)
+            fatalError("Save failed")
+        }
+
+        UserDefaults.standard.set(archiveData, forKey: Meal.ArchiveURL.path)
+        os_log("Meals successfully saved.", log: OSLog.default, type: .debug)
+    }
+
+    private func loadMeals() -> [Meal]? {
+        if let loadedData = UserDefaults().data(forKey: Meal.ArchiveURL.path) {
+            return try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(loadedData) as? [Meal]
+        }
+
+        return nil
     }
 }
